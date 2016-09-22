@@ -1,0 +1,24 @@
+@function torem($nx){//$px为需要转换的字号
+    @return $nx / 100 * 1rem; //40px为根字体大小
+}
+
+{{#extend "scss"}}
+{{#content "sprites"}}
+{{#each sprites}}
+{{name}} {
+    background-position: 0 {{offset_y}}/({{height}}-{{total_height}})*100%;
+    width:torem({{width}}); 
+    height:torem({{height}});
+}
+
+{{/each}}
+{{/content}}
+{{#content "spritesheet"}}
+.iconfont {
+	display: inline-block;
+    background-image: url('{{{spritesheet.escaped_image}}}');
+    background-repeat: no-repeat;
+    background-size: torem({{spritesheet.width}}) torem({{spritesheet.height}});
+}
+{{/content}}
+{{/extend}}
