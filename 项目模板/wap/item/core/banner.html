@@ -1,0 +1,24 @@
+<div class="banner-box">
+    <ul class="banner swiper-wrapper">
+        <li class="swiper-slide">
+            <img src="images/banner-n1.jpg">
+        </li>
+        <li class="swiper-slide">
+            <img src="images/banner-n2.jpg">
+        </li>
+        <li class="swiper-slide">
+            <img src="images/banner-n3.jpg">
+        </li>
+        <li class="swiper-slide">
+            <img src="images/banner-n4.jpg">
+        </li>
+    </ul>
+    <ul class="banner-dian swiper-pagination"></ul>
+</div>
+<script type="text/javascript">
+    var swiper = new Swiper('.banner-box', {
+        pagination: '.banner-dian',
+        paginationClickable: true,
+        loop: true
+    });
+</script>

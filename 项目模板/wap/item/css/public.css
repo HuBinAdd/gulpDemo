@@ -1,0 +1,72 @@
+@function px($nx){//$px为需要转换的字号
+    @return $nx / 100 * 1rem; //40px为根字体大小
+}
+
+@mixin  ellipsis(){
+    overflow:hidden;
+    white-space:nowrap; 
+    -o-text-overflow:ellipsis; 
+    text-overflow:ellipsis; 
+}
+
+@mixin  centerCenter(){
+	position: absolute; 
+	top: 50%; 
+	left: 50%; 
+	-webkit-transform: translate3d(-50%, -50%, 0px); 
+	transform: translate3d(-50%, -50%, 0px); 
+}
+@mixin  topCenter(){
+	position: absolute; 
+	top: 50%; 
+	-webkit-transform: translate3d(0, -50%, 0px); 
+	transform: translate3d(0, -50%, 0px); 
+}
+@mixin  leftCenter(){
+	position: absolute; 
+	left: 50%; 
+	-webkit-transform: translate3d(-50%, 0, 0px); 
+	transform: translate3d(-50%, 0, 0px); 
+}
+@mixin  opacity($o:1){
+	filter:alpha(opacity=$o*100);
+	opacity:$o;
+}
+
+.ui-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #f5f5f5;
+}
+
+
+/*定义滚动条的轨道，内阴影及圆角*/
+
+.ui-scrollbar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+
+/*定义滑块，内阴影及圆角*/
+
+.ui-scrollbar::-webkit-scrollbar-thumb {
+    /*width: 10px;*/
+    height: 20px;
+    background-color: #888;
+}
+
+/*placeholder样式*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+color: #666;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+color: #666;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+color: #666;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+color: #666;
+} 

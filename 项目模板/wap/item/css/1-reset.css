@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+KISSY CSS Reset
+理念：清除和重置是紧密不可分的
+特色：1.适应中文 2.基于最新主流浏览器
+		胡斌 2014年9月
+*/
+/* 清除内外边距 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+body,button, input, select, textarea { /* for ie */
+    font: 14px/1.5 Tahoma, Helvetica, Arial,"Microsoft Yahei","微软雅黑", sans-serif;
+    /* font: 12px/1.5 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; *//* 用 ascii 字符表示，使得在任何编码下都无问题 */
+    color:#333;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
+}
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    /* For some Androids */
+    outline: none;
+    outline: 0;
+}
+img{ vertical-align:top;}
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, li, ol { list-style: none; }
+li{ vertical-align:top;}
+
+
+/* 重置文本格式元素 */
+a { text-decoration: none;color:#383838; outline:none; cursor:pointer; }
+
+a:hover { text-decoration: none; color: #63a7e8; }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 
+	*/
+	border:none;
+	*border:0;
+	outline:none !important;
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr { height:0; border:0; border-top:1px solid #b6c4d8; margin:10px 0; -margin:5px 0; padding:0; overflow:hidden; }
+hr.ui-dbline{ height:4px; height:2px \9; -height:6px; border-top:1px solid #b6c4d8; border-right:none; border-bottom:1px solid #b6c4d8; border-left:none; margin:10px 0px; -margin:5px 0px; padding:0; overflow:hidden; }
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+/*html { overflow-y: scroll; }*/
+
+
+
+
+
+
+
+/* 定位 */
+.rel { position:relative; }
+.abs { position:absolute; }
+.fix { position:fixed; }
+
+/* 浮动 */
+.fl{ float:left; display:inline; }
+.fr{ float:right; display:inline; }
+
+/* 元素可见性 */
+.hidden { visibility:hidden; }
+.visible { visibility:visible; }
+.hide { display:none; }
+.show { display:block; }
+.inline{  display:inline;}
+.inline-block { display: inline-block;*zoom:1;*display:inline;}
+
+/***解决IE高度为1bug**/
+.h1{ height:1px; overflow:hidden;}
+
+/***解决IE6最小高度bug**/
+.min-height{min-height:500px;height: auto;_height:500px;}
+
+/* 外补丁 */
+.mauto { margin-left:auto; margin-right:auto; }
+.m0 { margin:0; }
+.m5 { margin:5px; }
+.m10 { margin:10px; }
+.m15 { margin:15px; }
+.m20 { margin:20px; }
+.mt-1 { margin-top:-1px; }
+.mt0 { margin-top:0; }
+.mt5 { margin-top:5px; }
+.mt10 { margin-top:10px !important; }
+.mt15 { margin-top:15px; }
+.mt20 { margin-top:20px; }
+.mb-1 { margin-bottom:-1px; }
+.mb0 { margin-bottom:0; }
+.mb5 { margin-bottom:5px; }
+.mb10 { margin-bottom:10px; }
+.mb15 { margin-bottom:15px; }
+.mb20 { margin-bottom:20px; }
+.ml-1 { margin-left:-1px; }
+.ml0 { margin-left:0; }
+.ml5 { margin-left:5px; }
+.ml10 { margin-left:10px; }
+.ml15 { margin-left:15px; }
+.ml20 { margin-left:20px; }
+.mr-1 { margin-right:-1px; }
+.mr0 { margin-right:0; }
+.mr5 { margin-right:5px; }
+.mr10 { margin-right:10px; }
+.mr15 { margin-right:15px; }
+.mr20 { margin-right:20px; }
+
+/* 内补丁 */
+.p0 { padding:0; }
+.p5 { padding:5px; }
+.p10 { padding:10px; }
+.p15 { padding:15px; }
+.p20 { padding:20px; }
+.pt0 { padding-top:0; }
+.pt5 { padding-top:5px; }
+.pt10 { padding-top:10px; }
+.pt15 { padding-top:15px; }
+.pt20 { padding-top:20px; }
+.pb0 { padding-bottom:0; }
+.pb5 { padding-bottom:5px; }
+.pb10 { padding-bottom:10px; }
+.pb15 { padding-bottom:15px; }
+.pb20 { padding-bottom:20px; }
+.pl0 { padding-left:0; }
+.pl5 { padding-left:5px; }
+.pl10 { padding-left:10px; }
+.pl15 { padding-left:15px; }
+.pl20 { padding-left:20px; }
+.pr0 { padding-right:0; }
+.pr5 { padding-right:5px; }
+.pr10 { padding-right:10px; }
+.pr15 { padding-right:15px; }
+.pr20 { padding-right:20px; }
+
+/* 文本水平对齐方式 */
+.left { text-align:left!important; }
+.center{ text-align:center!important; }
+.right{ text-align:right!important; }
+
+/* 文本垂直对齐方式 */
+.top { vertical-align:top!important; }
+.middle { vertical-align:middle!important; }
+.bottom { vertical-align:bottom!important; }
+
+/* 行高 */
+.lh10 { line-height:1.0; }
+.lh15 { line-height:1.5; }
+.lh20 { line-height:2.0; }
+
+/* 字体颜色 */
+.c000 { color:#000 !important; }
+.cfff { color:#fff !important; }
+.cf00 { color:#f00 !important; }
+.cf00 { color:#f00 !important; }
+.cf60 { color:#f60 !important; }
+.c333 { color:#333 !important; }
+.c666 { color:#666 !important; }
+.c999 { color:#999 !important; }
+.c00a94d { color:#00a94d !important; }
+
+/* 字体大小 */
+.fs0 { font-size:0; }
+.fs12 { font-size:12px; }
+.fs12b { font-size:12px; font-weight:700; }
+.fs14 { font-size:14px;}
+.fs14b { font-size:14px; font-weight:700; }
+.fs16 { font-size:16px; }
+.fs16b { font-size:16px; font-weight:700; }
+.fs18 { font-size:18px; }
+.fs18b { font-size:18px; font-weight:700; }
+.fs20 { font-size:20px !important; line-height:30px!important; }
+.fs20b { font-size:20px !important; font-weight:700 !important; line-height:30px; }
+
+/* 字体粗细 */
+.fwb { font-weight:700; }
+.fwn { font-weight:400; }
+
+/* 字体风格 */
+.fsn { font-style:normal; }
+
+/* 字体 */
+.ffyh { font-family:'microsoft yahei'; }
+
+/* 表格布局算法 */
+.gridfixed { table-layout:fixed; }
+
+/* 强制文本折行 */
+.wrap { display:block!important; word-wrap:break-word!important; word-break:keep-all!important; }
+/* 强制文本不折行，超出部分隐藏 */
+.ellipsis, .nobr, .unwrap { overflow:hidden!important; white-space:nowrap!important; -o-text-overflow:ellipsis!important; text-overflow:ellipsis!important; -width:100%; }
+.nowrap{overflow: hidden!important;white-space: nowrap!important;text-overflow: ellipsis!important;}
+/* 无背景 */
+.nobg { background:none !important;}
+/* 背景透明 */
+.transparent{ background-color:transparent!important;}
+/*元素透明度0*/
+.opacity{filter:alpha(Opacity=0);-moz-opacity:0;opacity: 0;}
+/* 链接无下划线 */
+.no-underline:hover, .no-underline a:hover { text-decoration:none!important; }
+/* end hide from ie-mac */
+/* 清除浮动clear*/
+.clear { zoom:1; overflow:hidden!important; }
+/* 清除浮动clearfix*/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }  
+.clearfix { display: inline-table; } /* Hides from IE-mac \*/  
+* html .clearfix { height: 1%; } 
+.clearfix { display: block; } /* End hide from IE-mac */ 
+
+.opacity{filter:alpha(opacity=50); opacity:0.5;}
+/*textarea禁止拖动*/
+.textarea{resize: none;}
+*{-webkit-tap-highlight-color:transparent;-o-tap-highlight-color:transparent;}
+html,body{-webkit-text-size-adjust: 100%;-o-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-o-tap-highlight-color: rgba(0, 0, 0, 0);}
