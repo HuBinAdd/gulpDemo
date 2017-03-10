@@ -11,3 +11,10 @@
 
 & gulp clean 清除已编译的项目
 
+# 本周工作
+  -项目代码熟悉
+   -insportal项目结构
+   -antUI熟悉
+   -AlipayJSBridgeReadyshuxi
+  -完成了一个专题页面
+
