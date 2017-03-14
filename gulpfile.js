@@ -28,7 +28,7 @@ const gulp = require('gulp'),
     webpackConfig = require("./webpack.config.js"),
     fileinclude = require('gulp-file-include');
 
-var projects = '项目/1217/wap/',
+var projects = '项目/投保专题页/pc/',
     date = new Date(),
     isPc = /\/pc\/$/g.test(projects);//判断是否为PC
 
@@ -55,7 +55,7 @@ var config = {
         dist: projects + 'dist'
     },
     htmlrev: {
-        dirname: projects + 'dist/首页.html',
+        dirname: projects + 'dist/*.html',
         dist: projects + 'dist'
     },
     spritesmith: {
@@ -283,8 +283,7 @@ gulp.task('css', function() {
                 cascade: true,
                 remove: true
             }),
-            cssnext(),
-            cssgrace
+            cssnext()
         ];
     }else{
         processors = [
@@ -301,7 +300,7 @@ gulp.task('css', function() {
         .pipe(cssver()) //给css文件里引用文件加版本号（文件MD5）
         .pipe(concat('main.css')) //css合并
         .pipe(postcss(processors))
-        .pipe(gulp.dest(config.css.dist))
+        // .pipe(gulp.dest(config.css.dist))
         .pipe(rename({ suffix: '.min' }))
         .pipe(cssmin({
             advanced: false, //类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
