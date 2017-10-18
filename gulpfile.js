@@ -27,8 +27,17 @@ const gulp = require('gulp'),
     filter = require('gulp-filter'),
     webpackConfig = require("./webpack.config.js"),
     fileinclude = require('gulp-file-include');
+    minimist = require('minimist');
 
-var projects = '项目/投保专题页/pc/',
+var knownOptions = {
+  string: 'env',
+  default: { env: process.env.NODE_ENV || 'production' }
+};
+
+
+var options = minimist(process.argv.slice(2), knownOptions);
+
+var projects =  `项目${options.name ? `/${options.name}`:''}/${options.dev || 'wap'}`,
     date = new Date(),
     isPc = /\/pc\/$/g.test(projects);//判断是否为PC
 

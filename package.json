@@ -4,9 +4,10 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "jshint": "^2.9.2",
+    "minimist": "^1.2.0",
     "postcss-reporter": "^1.4.1",
-    "stylelint": "^7.0.3",
-    "jshint": "^2.9.2"
+    "stylelint": "^7.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
